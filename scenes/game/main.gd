@@ -2,15 +2,15 @@ extends Node2D
 
 @onready var network_manager: Node = $Network_Manager
 @onready var text_edit: TextEdit = $TextEdit
-var player_scene = preload("res://actors/player/player.tscn")
+var player_scene = preload("res://scenes/actors/player/player.tscn")
 var players = {}
 
 func _ready() -> void:
 	print("🚀 Inicializando o jogo...")
 	
 	#var is_server = true
-	if OS.has_feature("server"):
-	#if "--server" in OS.get_cmdline_args():
+	#if OS.has_feature("server"):
+	if "--server" in OS.get_cmdline_args():
 	#if is_server:
 		print("🖥️ Rodando como servidor!")
 		network_manager.start_server()

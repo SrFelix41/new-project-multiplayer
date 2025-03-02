@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://duatswi72abrk"]
 
-[ext_resource type="Script" path="res://actors/player/player.gd" id="1_a66hn"]
+[ext_resource type="Script" path="res://scenes/actors/player/player.gd" id="1_a66hn"]
 [ext_resource type="Texture2D" uid="uid://bjaiuwa5cv62k" path="res://icon.svg" id="1_ialo2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tndit"]
