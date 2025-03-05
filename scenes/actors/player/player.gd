@@ -1,6 +1,12 @@
 extends CharacterBody2D
 
 @export var speed: float = 200.0
+@export var player_name: String = "Jogador"
+
+@onready var name_text: Label = $player_name
+
+func _ready() -> void:
+	name_text.text = player_name
 
 func _process(_delta: float) -> void:
 	if multiplayer.get_unique_id() == int(name):
