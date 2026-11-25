@@ -1,3 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Builds exportados (não versionar binários: são grandes e mudam a cada export)
+/builds/
+*.exe
+*.pck
+*.x86_64
+*.console.exe
+
+# Arquivos temporários (Windows / Godot)
+*.TMP
+*.tmp
+*~RF*
