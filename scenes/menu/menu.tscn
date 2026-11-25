@@ -4,40 +4,70 @@
 
 [node name="Menu" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n2wk8")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Centro" type="CenterContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -62.5
-offset_top = -20.0
-offset_right = 62.5
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BotaoServidor" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Centro"]
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Iniciar Servidor"
+theme_override_constants/separation = 10
 
-[node name="BotaoCliente" type="Button" parent="VBoxContainer"]
+[node name="Titulo" type="Label" parent="Centro/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+text = "New Project Multiplayer"
+horizontal_alignment = 1
+
+[node name="LabelNome" type="Label" parent="Centro/VBoxContainer"]
+layout_mode = 2
+text = "Seu nome:"
+
+[node name="CampoNome" type="LineEdit" parent="Centro/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Jogador"
+max_length = 16
+
+[node name="LabelIP" type="Label" parent="Centro/VBoxContainer"]
+layout_mode = 2
+text = "IP do servidor (só para entrar como cliente):"
+
+[node name="CampoIP" type="LineEdit" parent="Centro/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "127.0.0.1"
+
+[node name="BotaoHost" type="Button" parent="Centro/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hospedar e Jogar"
+
+[node name="BotaoCliente" type="Button" parent="Centro/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 text = "Entrar como Cliente"
 
-[node name="CampoIP" type="LineEdit" parent="VBoxContainer"]
+[node name="BotaoServidor" type="Button" parent="Centro/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+text = "Iniciar Servidor Dedicado"
+
+[node name="LabelErro" type="Label" parent="Centro/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+horizontal_alignment = 1
+autowrap_mode = 3
